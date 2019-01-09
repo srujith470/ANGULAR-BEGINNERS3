@@ -1,19 +1,19 @@
-<div class="course-card" *ngIf="course" #container>
+<div class="course-card" *ngIf="course1" #container>
 
   <div class="course-title">
-    {{ cardIndex || '' + ' ' + course.description }}
+    {{ cardIndex || '' + ' ' + course1.description }}
   </div>
 
   <ng-content select="course-image"
-              *ngIf="course.iconUrl"></ng-content>
+              *ngIf="course1.iconUrl"></ng-content>
 
   <div class="course-description">
 
-    Edit Title: <input #courseTitle [value]="course.description">
+    Edit Title: <input #courseTitle [value]="course1.description">
 
   </div>
 
-  <div class="course-category" [ngSwitch]="course.category">
+  <div class="course-category" [ngSwitch]="course1.category">
 
     <div class="category" *ngSwitchCase="'BEGINNER'">Beginner</div>
 
